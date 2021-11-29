@@ -18,14 +18,14 @@ namespace Test.Controllers
             _northwindContext = northwindContext;
         }
 
-        // GET: api/<customerController>
+        // GET: 顯示所有資料
         [HttpGet("all")]
         public ActionResult<IEnumerable<Customer>> Get()
         {
             return _northwindContext.Customers.ToList();
         }
 
-        // GET api/<customerController>/5
+        // GET 尋找某筆資料
         [HttpGet("find")]
         public ActionResult<Customer> Get([FromBody] Customer value)
         {
@@ -37,7 +37,7 @@ namespace Test.Controllers
             return result;
         }
 
-        // POST api/<customerController>
+        // POST 增加資料
         [HttpPost("add")]
         public ActionResult<Customer> Post([FromBody] Customer value)
         {
@@ -46,7 +46,7 @@ namespace Test.Controllers
             return CreatedAtAction(nameof(Get), new { customerId = value.CustomerId }, value.CustomerId);
         }
 
-        // PUT api/<customerController>/5
+        // PUT 修改資料
         [HttpPut("edit")]
         public IActionResult Put([FromBody] Customer value)
         {
@@ -59,11 +59,10 @@ namespace Test.Controllers
             else
             {
                 return NotFound("失敗(false)");
-
             }
         }
 
-        // DELETE api/<customerController>/5
+        // DELETE 刪除資料
         [HttpDelete("delete")]
         public IActionResult Delete([FromBody] Customer value)
         {

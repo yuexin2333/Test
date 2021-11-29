@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abeb51b1-013d-4af6-a3a0-66d6088619a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Test/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,17 @@
       <workItem from="1638175264846" duration="132000" />
       <workItem from="1638175413750" duration="91000" />
       <workItem from="1638175524254" duration="33000" />
+      <workItem from="1638175572682" duration="51000" />
+      <workItem from="1638176115001" duration="323000" />
     </task>
+    <task id="LOCAL-00001" summary="1129">
+      <created>1638175607269</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638175607269</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,5 +108,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="1129" />
+    <option name="LAST_COMMIT_MESSAGE" value="1129" />
   </component>
 </project>
