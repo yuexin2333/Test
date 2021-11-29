@@ -12,7 +12,8 @@ namespace Test.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        private readonly NorthwindContext _northwindContext; 
+        private readonly NorthwindContext _northwindContext;
+
         public CustomerController(NorthwindContext northwindContext)
         {
             _northwindContext = northwindContext;
@@ -32,8 +33,9 @@ namespace Test.Controllers
             var result = _northwindContext.Customers.Find(value.CustomerId);
             if (result == null)
             {
-                return NotFound("NotFound");
+                return NotFound("找不到這筆資料");
             }
+
             return result;
         }
 
@@ -43,7 +45,7 @@ namespace Test.Controllers
         {
             _northwindContext.Customers.Add(value);
             _northwindContext.SaveChanges();
-            return CreatedAtAction(nameof(Get), new { customerId = value.CustomerId }, value.CustomerId);
+            return CreatedAtAction(nameof(Get), value.CustomerId);
         }
 
         // PUT 修改某筆資料
@@ -55,31 +57,30 @@ namespace Test.Controllers
 
         private IActionResult IsEdit(Customer value)
         {
-            if (value.CustomerId != null)
-            {
-                return SaveEdit(value);
-            }
-            else
-            {
-                return NotFound("失敗(false)");
-
-            }
+            return value.CustomerId != null ? SaveEdit(value) : NotFound("修改失敗(false)");
         }
 
         private IActionResult SaveEdit(Customer value)
         {
             _northwindContext.Entry(value).State = EntityState.Modified;
             _northwindContext.SaveChanges();
-            return Content("成功(true)");
+            return Content("修改成功(true)");
         }
 
         // DELETE 刪除某筆資料
         [HttpDelete("delete")]
         public IActionResult Delete([FromBody] Customer value)
         {
+            return IsDelete(value);
+        }
+
+        private IActionResult IsDelete(Customer value)
+        {
+            var result = _northwindContext.Customers.Find(value.CustomerId);
+            if (result == null) return NotFound("刪除失敗(false)");
             _northwindContext.Customers.Remove(value);
             _northwindContext.SaveChanges();
-            return Content("成功(true)");
+            return Content("刪除成功(true)");
         }
     }
 }

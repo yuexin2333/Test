@@ -5,7 +5,7 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abeb51b1-013d-4af6-a3a0-66d6088619a2" name="Changes" comment="更改註解">
+    <list default="true" id="abeb51b1-013d-4af6-a3a0-66d6088619a2" name="Changes" comment="增加註解2.0">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Controllers/customerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Controllers/customerController.cs" afterDir="false" />
     </list>
@@ -80,7 +80,7 @@
       <workItem from="1638175413750" duration="91000" />
       <workItem from="1638175524254" duration="33000" />
       <workItem from="1638175572682" duration="51000" />
-      <workItem from="1638176115001" duration="698000" />
+      <workItem from="1638176115001" duration="1645000" />
     </task>
     <task id="LOCAL-00001" summary="1129">
       <created>1638175607269</created>
@@ -96,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638176555724</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="增加註解2.0">
+      <created>1638176826686</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638176826686</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +126,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="1129" />
     <MESSAGE value="更改註解" />
-    <option name="LAST_COMMIT_MESSAGE" value="更改註解" />
+    <MESSAGE value="增加註解2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加註解2.0" />
   </component>
 </project>
