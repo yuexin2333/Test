@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,7 +46,9 @@ namespace Test.Controllers
         {
             _northwindContext.Customers.Add(value);
             _northwindContext.SaveChanges();
+            
             return CreatedAtAction(nameof(Get), value.CustomerId);
+            
         }
 
         // PUT 修改某筆資料
