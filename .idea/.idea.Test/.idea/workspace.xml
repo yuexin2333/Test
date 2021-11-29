@@ -5,8 +5,9 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abeb51b1-013d-4af6-a3a0-66d6088619a2" name="Changes" comment="">
+    <list default="true" id="abeb51b1-013d-4af6-a3a0-66d6088619a2" name="Changes" comment="更改註解">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Controllers/customerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Controllers/customerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +19,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/source/repos/yuexin2333/Test/Test/Controllers/customerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/SQL/Test/Test/Controllers/customerController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21aNV1EkAEScnJTbNPUmXK38niT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -78,7 +80,7 @@
       <workItem from="1638175413750" duration="91000" />
       <workItem from="1638175524254" duration="33000" />
       <workItem from="1638175572682" duration="51000" />
-      <workItem from="1638176115001" duration="323000" />
+      <workItem from="1638176115001" duration="698000" />
     </task>
     <task id="LOCAL-00001" summary="1129">
       <created>1638175607269</created>
@@ -87,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638175607269</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="更改註解">
+      <created>1638176555724</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638176555724</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +118,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="1129" />
-    <option name="LAST_COMMIT_MESSAGE" value="1129" />
+    <MESSAGE value="更改註解" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改註解" />
   </component>
 </project>

@@ -12,7 +12,7 @@ namespace Test.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        private readonly NorthwindContext _northwindContext;
+        private readonly NorthwindContext _northwindContext; 
         public CustomerController(NorthwindContext northwindContext)
         {
             _northwindContext = northwindContext;
@@ -37,7 +37,7 @@ namespace Test.Controllers
             return result;
         }
 
-        // POST 增加資料
+        // POST 增加一筆資料
         [HttpPost("add")]
         public ActionResult<Customer> Post([FromBody] Customer value)
         {
@@ -46,23 +46,34 @@ namespace Test.Controllers
             return CreatedAtAction(nameof(Get), new { customerId = value.CustomerId }, value.CustomerId);
         }
 
-        // PUT 修改資料
+        // PUT 修改某筆資料
         [HttpPut("edit")]
         public IActionResult Put([FromBody] Customer value)
         {
+            return IsEdit(value);
+        }
+
+        private IActionResult IsEdit(Customer value)
+        {
             if (value.CustomerId != null)
             {
-                _northwindContext.Entry(value).State = EntityState.Modified;
-                _northwindContext.SaveChanges();
-                return Content("成功(true)");
+                return SaveEdit(value);
             }
             else
             {
                 return NotFound("失敗(false)");
+
             }
         }
 
-        // DELETE 刪除資料
+        private IActionResult SaveEdit(Customer value)
+        {
+            _northwindContext.Entry(value).State = EntityState.Modified;
+            _northwindContext.SaveChanges();
+            return Content("成功(true)");
+        }
+
+        // DELETE 刪除某筆資料
         [HttpDelete("delete")]
         public IActionResult Delete([FromBody] Customer value)
         {
